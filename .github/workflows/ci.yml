@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    strategy:
+      matrix:
+        python-version:
+          - "3.11"
+          - "3.12"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Lint
+        run: |
+          ruff check . --ignore E501
+
+      - name: Run tests
+        if: hashFiles('tests/') != ''
+        run: |
+          pytest tests/ -v --tb=short
+
+      - name: Smoke test imports
+        run: |
+          python -c "import core"
+          python -c "import strategies"
+          python -c "import knowledge_graph"
+          python -c "import evaluation"
+
+      - name: Success
+        run: echo "CI passed"
