@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Testing / linting
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data
+data/*
+!data/.gitkeep
+
+cache/
+
+# Local corpus PDFs
+corpus/**/*.pdf
+
+# Environment variables
+.env
+.env.*
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Streamlit cache
+.streamlit/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Temporary files
+*.tmp
+*.temp
