@@ -1,0 +1,41 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries reason about consistency-availability trade-offs, failure
+      modes, and cross-architecture comparisons in distributed systems.
+      No system-specific names present in queries.
+
+- query: "What consistency trade-offs must be accepted when designing a distributed datastore that scales horizontally across many nodes?"
+  expected_docs:
+    - "Highly_Scalable_Distributed_Architecture_for_NoSQL_Datastore_Supporting_Strong_Consistency.pdf"
+    - "Analysis_of_the_Matrix_Event_Graph_Replicated_Data_Type.pdf"
+  query_type: analytical
+  domain: system_design
+
+- query: "How do leader-election and log-replication mechanisms affect recovery time when a node fails mid-consensus?"
+  expected_docs:
+    - "RaftOptima_An_Optimised_Raft_With_Enhanced_Fault_Tolerance_and_Increased_Scalability_With_Low_Latency.pdf"
+  query_type: multi_hop
+  domain: system_design
+
+- query: "What are the throughput and ordering guarantees of publish-subscribe messaging systems used in large-scale data pipelines?"
+  expected_docs:
+    - "A_Survey_on_Networked_Data_Streaming_With_Apache_Kafka.pdf"
+    - "A_Study_on_Big_Data_Collecting_and_Utilizing_Smart_Factory_Based_Grid_Networking_Big_Data_Using_Apache_Kafka.pdf"
+  query_type: analytical
+  domain: system_design
+
+- query: "How do conflict-free replicated data structures ensure eventual consistency without requiring coordination between replicas?"
+  expected_docs:
+    - "Analysis_of_the_Matrix_Event_Graph_Replicated_Data_Type.pdf"
+  query_type: entity_relationship
+  domain: system_design
+
+- query: "What are the practical limitations of using heuristic search methods for partitioning and schema decisions in distributed databases?"
+  expected_docs:
+    - "Distributed_database_design_using_evolutionary_algorithms.pdf"
+  query_type: analytical
+  domain: system_design

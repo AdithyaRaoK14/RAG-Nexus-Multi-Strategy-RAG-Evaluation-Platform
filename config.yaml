@@ -1,0 +1,102 @@
+models:
+  llm:
+    provider: ollama
+    default: qwen2.5:7b
+    base_url: http://localhost:11434
+    temperature: 0.0
+    max_tokens: 512
+    timeout: 300
+
+  comparison_models:             # model comparison benchmark
+    - qwen2.5:7b
+    - phi3:mini
+    - llama3.2:3b
+
+  embedding:
+    name: BAAI/bge-base-en-v1.5  # 768-dim, ~440MB
+    device: cuda
+    batch_size: 32
+    query_prefix: "Represent this sentence for searching relevant passages: "
+
+  reranker:
+    name: cross-encoder/ms-marco-MiniLM-L-6-v2   # ~80MB
+    device: cuda
+    top_k: 5
+
+qdrant:
+  mode: local                    # local | server
+  local_path: ./data/qdrant
+  host: localhost
+  port: 6333
+  collection_name: rag_nexus
+  vector_size: 768               # must match bge-base-en-v1.5
+  distance: cosine
+
+retrieval:
+  top_k: 10
+  rerank_top_k: 5
+  bm25_weight: 0.3
+  dense_weight: 0.7
+  rrf_k: 60
+  confidence_threshold: 0.55    # below this → self-healing fires
+
+chunking:
+  strategy: recursive
+  chunk_size: 512
+  chunk_overlap: 64
+  min_chunk_size: 100
+
+knowledge_graph:
+  store_path: ./data/knowledge_graph.pkl
+  max_triples_per_chunk: 5       # Ollama extraction limit per chunk
+  min_entity_freq: 2             # prune nodes appearing only once
+
+adaptive_router:
+  # Maps QueryType → strategy name
+  simple: hybrid_rag
+  entity_relationship: graph_rag
+  procedural: advanced_rag
+  multi_hop: multihop_rag
+  analytical: advanced_rag
+
+healing_pipeline:
+  cascade:                       # tried in order when confidence < threshold
+    - hybrid_rag
+    - advanced_rag               # includes HyDE
+    - graph_rag
+  max_attempts: 3
+
+multihop:
+  max_hops: 3
+  min_new_info_threshold: 0.3   # cosine distance; skip hop if too similar
+
+evaluation:
+  metrics:
+    - hit_at_1
+    - hit_at_3
+    - hit_at_5
+    - mrr
+    - faithfulness
+    - context_precision
+    - latency_ms
+  faithfulness_model: qwen2.5:3b
+
+corpus:
+  base_path: ./corpus
+  supported_extensions: [.pdf, .txt, .md]
+  domains:
+    - medical
+    - security
+    - rag_retrieval
+    - llm
+    - system_design
+    - devops
+    - aiml_cloud
+
+observability:
+  enabled: true
+  db_path: ./data/traces.db
+
+logging:
+  level: INFO
+  format: "%(asctime)s | %(name)s | %(levelname)s | %(message)s"

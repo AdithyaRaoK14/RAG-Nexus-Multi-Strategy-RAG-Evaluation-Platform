@@ -1,0 +1,40 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    version: "1.0"
+    notes: >
+      Queries cover distributed systems concepts — consensus, data streaming,
+      NoSQL scalability, and evolutionary database design. System-specific
+      names (RaftOptima, Matrix Event Graph) were removed from query strings
+      to prevent trivial BM25 title matching.
+
+- query: "How do replicated data types maintain consistency in distributed event-driven systems?"
+  expected_docs:
+    - "Analysis_of_the_Matrix_Event_Graph_Replicated_Data_Type.pdf"
+  query_type: entity_relationship
+  domain: system_design
+
+- query: "What architectural approaches enable scalable real-time data streaming systems?"
+  expected_docs:
+    - "A_Survey_on_Networked_Data_Streaming_With_Apache_Kafka.pdf"
+    - "A_Study_on_Big_Data_Collecting_and_Utilizing_Smart_Factory_Based_Grid_Networking_Big_Data_Using_Apache_Kafka.pdf"
+  query_type: procedural
+  domain: system_design
+
+- query: "What optimizations to consensus algorithms improve fault tolerance and reduce latency in distributed systems?"
+  expected_docs:
+    - "RaftOptima_An_Optimised_Raft_With_Enhanced_Fault_Tolerance_and_Increased_Scalability_With_Low_Latency.pdf"
+  query_type: multi_hop
+  domain: system_design
+
+- query: "How can evolutionary algorithms be used for distributed database design?"
+  expected_docs:
+    - "Distributed_database_design_using_evolutionary_algorithms.pdf"
+  query_type: analytical
+  domain: system_design
+
+- query: "What architectural patterns achieve strong consistency while maintaining horizontal scalability in NoSQL datastores?"
+  expected_docs:
+    - "Highly_Scalable_Distributed_Architecture_for_NoSQL_Datastore_Supporting_Strong_Consistency.pdf"
+  query_type: analytical
+  domain: system_design

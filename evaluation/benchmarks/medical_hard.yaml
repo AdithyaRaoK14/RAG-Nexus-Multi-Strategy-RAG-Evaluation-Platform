@@ -1,0 +1,45 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries require multi-document reasoning, cross-paper comparison,
+      or abstract concept retrieval. No domain-specific terminology from paper
+      titles is present in the queries. Designed to differentiate strategy
+      performance where the standard benchmark saturates at Hit@5=1.0.
+
+- query: "Compare approaches that combine multiple deep learning representations for oral cancer diagnosis and discuss trade-offs in model complexity."
+  expected_docs:
+    - "Histopathological_Image_Based_Oral_Squamous_Cell_Carcinoma_Classification_Using_Deep_Network_Fusion.pdf"
+    - "Ensemble_Deep_Learning_Framework_for_Oral_Squamous_Cell_Carcinoma_OSCC_Classification_Using_Modified_VGG_and_CNN_Features_with_XGBoost.pdf"
+  query_type: analytical
+  domain: medical
+
+- query: "What are the limitations of purely convolutional approaches for histopathological cancer grading and how have recent architectures addressed them?"
+  expected_docs:
+    - "Squamous_Cell_Carcinoma_Margin_Classification_Using_Vision_Transformers_from_Digital_Histopathology_Images.pdf"
+    - "EsccNet_A_Hybrid_CNN_and_Transformers_Model_for_the_Classification_of_Whole_Slide_Images_of_Esophageal_Squamous_Cell_Carcinoma.pdf"
+    - "Classification_of_Oral_Squamous_Carcinoma_Histopathological_images_using_Alex_Net.pdf"
+  query_type: analytical
+  domain: medical
+
+- query: "How do transfer learning strategies influence grading accuracy when labelled pathology data is scarce?"
+  expected_docs:
+    - "Automated_Grading_of_Oral_Squamous_Cell_Carcinoma_into_Multiple_Classes_Using_Deep_Learning_Methods.pdf"
+    - "LungCarcinoGrade-EffNetSVM_A_Novel_Approach_to_Lung_Carcinoma_Grading_using_EfficientNetB0_and_Support_Vector_Machine.pdf"
+  query_type: multi_hop
+  domain: medical
+
+- query: "What role does spatial context play in automated tumour boundary detection from tissue images?"
+  expected_docs:
+    - "Squamous_Cell_Carcinoma_Margin_Classification_Using_Vision_Transformers_from_Digital_Histopathology_Images.pdf"
+  query_type: analytical
+  domain: medical
+
+- query: "How do classical machine learning classifiers complement deep feature extractors in cancer severity prediction?"
+  expected_docs:
+    - "LungCarcinoGrade-EffNetSVM_A_Novel_Approach_to_Lung_Carcinoma_Grading_using_EfficientNetB0_and_Support_Vector_Machine.pdf"
+    - "Ensemble_Deep_Learning_Framework_for_Oral_Squamous_Cell_Carcinoma_OSCC_Classification_Using_Modified_VGG_and_CNN_Features_with_XGBoost.pdf"
+  query_type: multi_hop
+  domain: medical

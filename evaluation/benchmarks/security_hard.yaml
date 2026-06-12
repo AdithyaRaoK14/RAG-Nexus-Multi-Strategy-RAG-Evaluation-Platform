@@ -1,0 +1,44 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries reason about detection trade-offs, model generalisation,
+      and cross-method comparisons for SQL injection. No method names or
+      architecture acronyms present in queries.
+
+- query: "What are the generalisation limitations of supervised classifiers trained on labelled SQL injection payloads when applied to novel attack patterns?"
+  expected_docs:
+    - "Research_on_SQL_Injection_Vulnerabilities_and_Its_Detection_Methods.pdf"
+    - "A_Comprehensive_Survey_for_Detection_and_Prevention_of_SQL_Injection.pdf"
+  query_type: analytical
+  domain: security
+
+- query: "How do sequence-based neural approaches to attack detection differ from tree-based methods in terms of false positive rates and interpretability?"
+  expected_docs:
+    - "A_CNN-BiLSTM_based_Approach_for_Detection_of_SQL_Injection_Attacks.pdf"
+    - "Random_Decision_Forest_approach_for_Mitigating_SQL_Injection_Attacks.pdf"
+  query_type: analytical
+  domain: security
+
+- query: "What challenges arise when deploying injection attack detectors in latency-sensitive embedded or transport systems?"
+  expected_docs:
+    - "LSTM-Based_SQL_Injection_Detection_Method_for_Intelligent_Transportation_System.pdf"
+  query_type: multi_hop
+  domain: security
+
+- query: "How have deep learning architectures been adapted to handle variable-length malicious input strings in database security contexts?"
+  expected_docs:
+    - "A_CNN-based_Approach_to_the_Detection_of_SQL_Injection_Attacks.pdf"
+    - "A_CNN-BiLSTM_based_Approach_for_Detection_of_SQL_Injection_Attacks.pdf"
+  query_type: multi_hop
+  domain: security
+
+- query: "What does the existing literature identify as the most persistent gaps in automated defences against database query manipulation attacks?"
+  expected_docs:
+    - "Research_on_SQL_Injection.pdf"
+    - "Overview_of_SQL_Injection_Defense_Mechanisms.pdf"
+    - "A_Comprehensive_Survey_for_Detection_and_Prevention_of_SQL_Injection.pdf"
+  query_type: analytical
+  domain: security

@@ -1,0 +1,38 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    version: "1.0"
+    notes: >
+      Queries cover LLM performance factors, multi-model chaining, fine-tuning
+      comparisons, multimodal chain-of-thought, and watermarking. Phrased
+      around techniques and goals rather than paper-specific system names.
+
+- query: "What factors contribute to peak performance in large language models?"
+  expected_docs:
+    - "Achieving_Peak_Performance_for_Large_Language_Models_A_Systematic_Review.pdf"
+  query_type: simple
+  domain: llm
+
+- query: "How can multiple LLMs be chained together for automated unit test generation?"
+  expected_docs:
+    - "AI-Powered_Unit_Test_Generation_via_Multi-LLM_Chaining_A_Case_Study_With_GPT-4o_Gemini_and_Claude-3.5.pdf"
+  query_type: procedural
+  domain: llm
+
+- query: "How do different fine-tuning techniques for open-source language models compare on security and IT tasks?"
+  expected_docs:
+    - "Fine-Tuning_Open-Source_Large_Language_Models_for_Cybersecurity_and_IT_Support_A_Comparative_Study_on_LLM_Fine-Tuning_Techniques.pdf"
+  query_type: analytical
+  domain: llm
+
+- query: "How does multimodal chain-of-thought reasoning improve fine-grained evidence generation?"
+  expected_docs:
+    - "Incorporating_LLM_Versus_LLM_Into_Multimodal_Chain-of-Thought_for_Fine-Grained_Evidence_Generation.pdf"
+  query_type: multi_hop
+  domain: llm
+
+- query: "What post-hoc techniques watermark language model outputs without requiring access to model weights?"
+  expected_docs:
+    - "User-Controlled_Post-Hoc_Watermarking_for_LLM-Generated_Text_Without_Model_Access.pdf"
+  query_type: entity_relationship
+  domain: llm

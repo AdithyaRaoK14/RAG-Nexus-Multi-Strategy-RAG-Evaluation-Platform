@@ -1,0 +1,39 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    version: "1.0"
+    notes: >
+      Queries cover Kubernetes resource allocation, DevOps culture adoption,
+      container specification practices, microservice placement, and blockchain
+      for CI/CD auditability. Framed around problems and outcomes rather than
+      specific tool brand names.
+
+- query: "How does Kubernetes improve workload management and resource allocation in containerized environments?"
+  expected_docs:
+    - "Adaptive_resource_allocation_for_workflow_containerization_on_Kubernetes.pdf"
+  query_type: procedural
+  domain: devops
+
+- query: "What cultural and organizational challenges arise when adopting DevOps practices in software teams?"
+  expected_docs:
+    - "A_Systematic_Framework_for_Addressing_Critical_Challenges_in_Adopting_DevOps_Culture_in_Software_Development_A_PLS-SEM_Perspective.pdf"
+  query_type: analytical
+  domain: devops
+
+- query: "What developer practices improve containerized application specification and reproducibility?"
+  expected_docs:
+    - "Developing_Docker_and_Docker-Compose_Specifications_A_Developers_Survey.pdf"
+  query_type: simple
+  domain: devops
+
+- query: "How can workload profiling influence microservice placement decisions across multi-cluster environments?"
+  expected_docs:
+    - "Refining_Microservices_Placement_Employing_Workload_Profiling_Over_Multiple_Kubernetes_Clusters.pdf"
+  query_type: procedural
+  domain: devops
+
+- query: "How can distributed ledger technology improve auditability and traceability in CI/CD pipelines?"
+  expected_docs:
+    - "Exploring_the_Integration_of_Blockchain_and_Distributed_DevOps_for_Secure_Transparent_and_Traceable_Software_Development.pdf"
+  query_type: analytical
+  domain: devops

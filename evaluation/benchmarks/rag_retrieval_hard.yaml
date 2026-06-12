@@ -1,0 +1,42 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries require cross-paper synthesis on RAG architecture trade-offs,
+      memory, security, and evaluation. No system acronyms or paper-specific
+      terminology present in queries.
+
+- query: "How do query transformation methods interact with retrieval stages to improve downstream answer quality in open-domain QA?"
+  expected_docs:
+    - "QuIM-RAG_Advancing_Retrieval-Augmented_Generation_With_Inverted_Question_Matching_for_Enhanced_QA_Performance.pdf"
+    - "EvaRAG_Evaluating_Advanced_RAG_Techniques_With_Indexing_and_Distance_Metrics.pdf"
+  query_type: multi_hop
+  domain: rag_retrieval
+
+- query: "What are the security and privacy implications of granting retrieval systems access to heterogeneous organisational knowledge bases?"
+  expected_docs:
+    - "Permission-Aware_RAG_Identity_and_Access_Management_IAM-Based_Access_Filtering_in_Multi-Resource_Environments.pdf"
+  query_type: analytical
+  domain: rag_retrieval
+
+- query: "How does document structure affect chunking and indexing decisions in retrieval-augmented pipelines?"
+  expected_docs:
+    - "Enhancing_RAG_Performance_by_Representing_Hierarchical_Nodes_in_Headers_for_Tabular_Data.pdf"
+    - "EvaRAG_Evaluating_Advanced_RAG_Techniques_With_Indexing_and_Distance_Metrics.pdf"
+  query_type: analytical
+  domain: rag_retrieval
+
+- query: "What design considerations arise when a conversational agent must maintain coherence across many turns without reprocessing the full history?"
+  expected_docs:
+    - "RAG-Driven_Memory_Architectures_in_Conversational_LLMsA_Literature_Review_With_Insights_Into_Emerging_Agriculture_Data_Sharing.pdf"
+  query_type: multi_hop
+  domain: rag_retrieval
+
+- query: "How do different evaluation frameworks measure the gap between retrieved evidence quality and final answer correctness?"
+  expected_docs:
+    - "EvaRAG_Evaluating_Advanced_RAG_Techniques_With_Indexing_and_Distance_Metrics.pdf"
+    - "QuIM-RAG_Advancing_Retrieval-Augmented_Generation_With_Inverted_Question_Matching_for_Enhanced_QA_Performance.pdf"
+  query_type: analytical
+  domain: rag_retrieval

@@ -1,0 +1,39 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    version: "1.0"
+    notes: >
+      Queries were manually written to evaluate semantic retrieval of RAG
+      research papers without exposing system names (EvaRAG, QuIM-RAG, etc.)
+      in the query string. Tests whether the retriever understands retrieval
+      concepts rather than matching acronyms from document filenames.
+
+- query: "What indexing strategies and distance metrics affect evaluation of advanced RAG techniques?"
+  expected_docs:
+    - "EvaRAG_Evaluating_Advanced_RAG_Techniques_With_Indexing_and_Distance_Metrics.pdf"
+  query_type: analytical
+  domain: rag_retrieval
+
+- query: "How can hierarchical document structure improve RAG performance on tabular data?"
+  expected_docs:
+    - "Enhancing_RAG_Performance_by_Representing_Hierarchical_Nodes_in_Headers_for_Tabular_Data.pdf"
+  query_type: entity_relationship
+  domain: rag_retrieval
+
+- query: "What retrieval reformulation approaches improve question-answering performance in RAG pipelines?"
+  expected_docs:
+    - "QuIM-RAG_Advancing_Retrieval-Augmented_Generation_With_Inverted_Question_Matching_for_Enhanced_QA_Performance.pdf"
+  query_type: procedural
+  domain: rag_retrieval
+
+- query: "How can role-based access control and permission filtering be integrated into multi-resource RAG systems?"
+  expected_docs:
+    - "Permission-Aware_RAG_Identity_and_Access_Management_IAM-Based_Access_Filtering_in_Multi-Resource_Environments.pdf"
+  query_type: analytical
+  domain: rag_retrieval
+
+- query: "What memory architectures allow conversational LLMs to retain context across long interactions?"
+  expected_docs:
+    - "RAG-Driven_Memory_Architectures_in_Conversational_LLMsA_Literature_Review_With_Insights_Into_Emerging_Agriculture_Data_Sharing.pdf"
+  query_type: multi_hop
+  domain: rag_retrieval

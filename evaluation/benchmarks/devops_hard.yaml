@@ -1,0 +1,41 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries reason about DevOps trade-offs, organisational friction,
+      and cross-cutting concerns. No tool names or paper-specific terminology
+      present in queries.
+
+- query: "What organisational and process friction points slow down the adoption of continuous delivery practices in large engineering teams?"
+  expected_docs:
+    - "A_Systematic_Framework_for_Addressing_Critical_Challenges_in_Adopting_DevOps_Culture_in_Software_Development_A_PLS-SEM_Perspective.pdf"
+  query_type: analytical
+  domain: devops
+
+- query: "How do resource scheduling decisions in container orchestration systems affect tail latency and workload isolation?"
+  expected_docs:
+    - "Adaptive_resource_allocation_for_workflow_containerization_on_Kubernetes.pdf"
+    - "Refining_Microservices_Placement_Employing_Workload_Profiling_Over_Multiple_Kubernetes_Clusters.pdf"
+  query_type: multi_hop
+  domain: devops
+
+- query: "What auditability and tamper-evidence guarantees are achievable in software delivery pipelines without centralised trust anchors?"
+  expected_docs:
+    - "Exploring_the_Integration_of_Blockchain_and_Distributed_DevOps_for_Secure_Transparent_and_Traceable_Software_Development.pdf"
+  query_type: analytical
+  domain: devops
+
+- query: "How does workload heterogeneity across services complicate placement and scaling decisions in multi-cluster deployments?"
+  expected_docs:
+    - "Refining_Microservices_Placement_Employing_Workload_Profiling_Over_Multiple_Kubernetes_Clusters.pdf"
+    - "Adaptive_resource_allocation_for_workflow_containerization_on_Kubernetes.pdf"
+  query_type: analytical
+  domain: devops
+
+- query: "What are the reproducibility and portability trade-offs when standardising application environment definitions across teams?"
+  expected_docs:
+    - "Developing_Docker_and_Docker-Compose_Specifications_A_Developers_Survey.pdf"
+  query_type: analytical
+  domain: devops

@@ -1,0 +1,41 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    version: "1.0"
+    notes: >
+      Queries cover SQL injection detection and prevention across CNN, BiLSTM,
+      LSTM, Random Forest, and survey-style papers. Queries are framed around
+      method categories rather than paper titles to test conceptual retrieval.
+
+- query: "What are common SQL injection prevention mechanisms in web applications?"
+  expected_docs:
+    - "Overview_of_SQL_Injection_Defense_Mechanisms.pdf"
+    - "A_Comprehensive_Survey_for_Detection_and_Prevention_of_SQL_Injection.pdf"
+  query_type: procedural
+  domain: security
+
+- query: "How do deep learning sequence models detect malicious SQL payloads in network traffic?"
+  expected_docs:
+    - "A_CNN-based_Approach_to_the_Detection_of_SQL_Injection_Attacks.pdf"
+    - "A_CNN-BiLSTM_based_Approach_for_Detection_of_SQL_Injection_Attacks.pdf"
+  query_type: entity_relationship
+  domain: security
+
+- query: "How have recurrent neural networks been applied to SQL injection attack detection tasks?"
+  expected_docs:
+    - "LSTM-Based_SQL_Injection_Detection_Method_for_Intelligent_Transportation_System.pdf"
+  query_type: analytical
+  domain: security
+
+- query: "What ensemble and tree-based approaches have been proposed to mitigate SQL injection attacks?"
+  expected_docs:
+    - "Random_Decision_Forest_approach_for_Mitigating_SQL_Injection_Attacks.pdf"
+  query_type: analytical
+  domain: security
+
+- query: "What vulnerability classes and detection methods are surveyed in recent SQL injection literature?"
+  expected_docs:
+    - "Research_on_SQL_Injection.pdf"
+    - "Research_on_SQL_Injection_Vulnerabilities_and_Its_Detection_Methods.pdf"
+  query_type: simple
+  domain: security

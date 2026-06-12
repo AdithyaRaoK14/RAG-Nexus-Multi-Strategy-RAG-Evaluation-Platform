@@ -1,0 +1,39 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries reason about cross-domain application of generative models,
+      user trust in AI outputs, and multi-objective optimisation. No model
+      names or paper acronyms present in queries.
+
+- query: "What are the trust and reliability implications when users cannot distinguish between accurate and fabricated information from an AI assistant?"
+  expected_docs:
+    - "Fool_Me_Fool_Me_User_Attitudes_Toward_LLM_Falsehoods.pdf"
+  query_type: analytical
+  domain: aiml_cloud
+
+- query: "How can structured database retrieval be enhanced by semantic similarity without replacing the underlying query engine?"
+  expected_docs:
+    - "Enhancing_Keyword_Search_in_Relational_Databases_With_Word_Embeddings.pdf"
+  query_type: entity_relationship
+  domain: aiml_cloud
+
+- query: "What challenges arise when applying generative latent representations to engineering design problems with competing performance objectives?"
+  expected_docs:
+    - "Variational_Autoencoder-Based_Multiobjective_Topology_Optimization_of_Electrical_Machines_Using_Vector_Graphics.pdf"
+  query_type: multi_hop
+  domain: aiml_cloud
+
+- query: "How do attention mechanisms improve feature localisation in medical image classification without significantly increasing inference cost?"
+  expected_docs:
+    - "Soft_Attention_Based_Efficientnetv2b3_Model_for_Skin_Cancers_Disease_Classification_Using_Dermoscopy_Images.pdf"
+  query_type: analytical
+  domain: aiml_cloud
+
+- query: "What prompting strategies reduce hallucination risk in zero-shot classification of short, domain-specific financial texts?"
+  expected_docs:
+    - "Enhancing_Zero-Shot_Crypto_Sentiment_With_Fine-Tuned_Language_Model_and_Prompt_Engineering.pdf"
+  query_type: procedural
+  domain: aiml_cloud

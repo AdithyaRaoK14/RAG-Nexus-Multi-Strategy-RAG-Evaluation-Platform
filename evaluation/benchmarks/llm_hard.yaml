@@ -1,0 +1,40 @@
+- metadata:
+    benchmark_type: manually_curated
+    created_from: research_corpus
+    difficulty: hard
+    version: "1.0"
+    notes: >
+      Hard queries require reasoning about trade-offs in LLM deployment,
+      multi-model collaboration, and evaluation. Abstract phrasing avoids
+      keyword overlap with paper titles.
+
+- query: "What trade-offs arise when decomposing software engineering tasks across several specialised language models rather than a single large model?"
+  expected_docs:
+    - "AI-Powered_Unit_Test_Generation_via_Multi-LLM_Chaining_A_Case_Study_With_GPT-4o_Gemini_and_Claude-3.5.pdf"
+  query_type: analytical
+  domain: llm
+
+- query: "How does parameter-efficient adaptation of open-source models compare to full fine-tuning in specialised professional domains?"
+  expected_docs:
+    - "Fine-Tuning_Open-Source_Large_Language_Models_for_Cybersecurity_and_IT_Support_A_Comparative_Study_on_LLM_Fine-Tuning_Techniques.pdf"
+  query_type: analytical
+  domain: llm
+
+- query: "What factors beyond model size determine whether a language model can reliably answer domain-specific technical questions?"
+  expected_docs:
+    - "Achieving_Peak_Performance_for_Large_Language_Models_A_Systematic_Review.pdf"
+    - "Fine-Tuning_Open-Source_Large_Language_Models_for_Cybersecurity_and_IT_Support_A_Comparative_Study_on_LLM_Fine-Tuning_Techniques.pdf"
+  query_type: multi_hop
+  domain: llm
+
+- query: "How can provenance of AI-generated text be established without modifying the model or requiring access to its internals?"
+  expected_docs:
+    - "User-Controlled_Post-Hoc_Watermarking_for_LLM-Generated_Text_Without_Model_Access.pdf"
+  query_type: analytical
+  domain: llm
+
+- query: "How does integrating visual evidence into reasoning chains affect the reliability of generated factual claims?"
+  expected_docs:
+    - "Incorporating_LLM_Versus_LLM_Into_Multimodal_Chain-of-Thought_for_Fine-Grained_Evidence_Generation.pdf"
+  query_type: multi_hop
+  domain: llm

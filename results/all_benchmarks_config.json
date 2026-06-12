@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-11T14:15:11.014863+00:00",
+  "benchmark": null,
+  "strategies": [
+    "NaiveRAG",
+    "HybridRAG",
+    "AdvancedRAG",
+    "GraphRAG",
+    "MultihopRAG",
+    "AgenticRAG",
+    "AdaptiveRAG",
+    "HealingPipeline"
+  ],
+  "embedding_model": "BAAI/bge-base-en-v1.5",
+  "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "llm": "qwen2.5:7b",
+  "n_queries": 280
+}
