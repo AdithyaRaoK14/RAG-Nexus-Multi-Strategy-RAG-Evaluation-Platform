@@ -2,7 +2,6 @@
 
 [![CI](https://github.com/AdithyaRaoK14/RAG-Nexus-Multi-Strategy-RAG-Evaluation-Platform/actions/workflows/ci.yml/badge.svg)](https://github.com/AdithyaRaoK14/RAG-Nexus-Multi-Strategy-RAG-Evaluation-Platform/actions/workflows/ci.yml)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Ollama](https://img.shields.io/badge/Ollama-Local%20LLMs-black)](https://ollama.com/)
 [![Qdrant](https://img.shields.io/badge/Qdrant-Vector%20DB-red)](https://qdrant.tech/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B)](https://streamlit.io/)
